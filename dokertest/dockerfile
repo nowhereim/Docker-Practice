@@ -1,0 +1,19 @@
+FROM debian
+RUN apt-get update; apt-get install stress -y
+CMD ["stress", "--cpu", "1", "--vm", "1", "--vm-bytes", "128M", "--timeout", "600s"]
+
+
+
+
+
+
+
+
+# FROM node:12
+# COPY hello.js /
+# CMD [ "node", "/hello.js" ]
+
+
+
+# winpty docker exec -i -t --user root e70fe5ae9a93 bash
+# 위와같이 실행하면 컨테이너 내부로 들어갈 수 있다. gitbash 에 winpty 를 붙여야 한다. 컨테이너이름 또는 컨테이너아이디를 입력하면 된다.
